@@ -1012,7 +1012,7 @@ function get_sets()
 
 	sets.JA = {}
 
-	sets.JA.Berserk = {main = "Conqueror", back = "Cichol's Mantle", feet = "Agoge Calligae +3", body = "Pumm. Lorica +1"}
+	sets.JA.Berserk = {main = "Conqueror", back = "Cichol's Mantle", feet = "Agoge Calligae +3", body = "ica +1"}
 
 	sets.JA.Aggressor = {body = "Agoge Lorica +3", head = "Pummeler's mask +2"}
 
@@ -1077,7 +1077,7 @@ function get_sets()
 		neck="Moonlight Necklace",
 		hands = "Souveran Handschuhs +1",
 		feet = "Souveran Schuhs +1",
-		body = "Pumm. Lorica +1 +3",
+		body = "Pumm. Lorica +1",
 		ring1 = "Flamma Ring",
 		legs = "Souveran Diechlings +1",
 		head = "Souveran Schaller +1"
@@ -1116,7 +1116,7 @@ function get_sets()
 		feet = "Amm greaves"
 	}
 
-	sets.AF1 = {main = "Bravura", body = "Pumm. Lorica +1 +3", head = "Pummeler's Mask +3"}
+	sets.AF1 = {main = "Bravura", body = "Pumm. Lorica +1", head = "Pummeler's Mask +3"}
 	sets.AF2 = {
 		main = "Ragnarok",
 		sub = "Nepenthe grip",
