@@ -35,17 +35,17 @@ function get_sets()
 	
 	sets.Weapons.ShiningOne =  {main ="Shining One",sub="Nepenthe grip"}
 	
-	sets.Weapons.Ukon = {main ="Ukonvasara",sub="Nepenthe grip"}
+	--sets.Weapons.Ukon = {main ="Ukonvasara",sub="Nepenthe grip"}
 	
 	sets.Weapons.Dolichenus ={ main ="Dolichenus", sub = "Blurred Shield +1"}
 	
-	sets.Weapons.IkengaAxe ={ main ="Ikenga's Axe", sub = "Blurred Shield +1"}
+	--sets.Weapons.IkengaAxe ={ main ="Ikenga's Axe", sub = "Blurred Shield +1"}
 	
 	--sets.Weapons.Staff = {main ="Blurred Staff", sub="Nepenthe grip"}
 	
 	sets.Weapons.DolichenusDWTP = { main ="Dolichenus", sub = "Barbarity +1",}
 	
-	sets.Weapons.SwordDWTP = { main ="Neagling", sub = "Barbarity +1", augments={'TP Bonus +1000',}}
+	sets.Weapons.SwordDWTP = { main ="Naegling", sub = "Barbarity +1",}
 	
 	--Idle Sets--
 	sets.Idle = {}
@@ -108,17 +108,13 @@ function get_sets()
 
 	--TP Sets--
 	sets.TP = {}
-
 	sets.TP.index = {"Standard", "OH", "Chango", "DT", "H2H", "DW", "Hybrid",}
-	--1=Standard, 2=One Handed, 3=Chango, 4=DT, 5=H2H, 6=DW, 7=Hybrid,--
 	Melee_Default = 1
 	TP_ind = 7
 	
 	sets.TP.Standard ={
-		-- ammo ="Aurgelmir Orb +1",
 		head="Flamma Zucchetto +2",
 		ammo="Ginsen",
-		--head={ name="Sakpata's Helm", augments={'Path: A',}},
 		body="Flamma korazin +2",
 		hands="Flamma Manopolas +2",
 		legs="Flamma Dirs +2",
@@ -132,50 +128,25 @@ function get_sets()
 		back=DA_Back
 	}
 
-	-- sets.TP.Standard = {
-		-- ammo = "Coiste Bodhar",
-		-- head = "Hjarrandi Helm",
-		-- body = TP_Body,
-		-- --hands = "Sakpata's Gauntlets",
-		-- hands = "Sakpata's Gauntlets",
-		-- --legs = "Pumm. Cuisses +3",
-		-- legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-		-- feet = "Pumm. Calligae +3",
-		-- neck = "Warrior's bead necklace +2",
-		-- --waist = "Ioskeha belt +1",
-		-- waist = "Sailfi Belt +1",
-		-- left_ear = "Telos Earring",
-		-- --right_ear = "Cessance Earring",
-		-- right_ear = "Schere Earring",
-		-- left_ring = "Niqmaddu Ring",
-		-- right_ring = "Petrov Ring",
-		-- back = {name = "Cichol's Mantle", augments = {"STR+20", "Accuracy+20 Attack+20", "STR+10", '"Dbl.Atk."+10'}}
-	-- }
-
 	sets.TP.OH = {
 		ammo = "Coiste Bodhar",
-		--head = "Hjarrandi Helm",
 		head={ name="Sakpata's Helm", augments={'Path: A',}},
 		neck = "Warrior's bead necklace +2",
 		ear2 = "Schere Earring",
 		ear1 = "Telos earring",
-		--body={ name="Valorous Mail", augments={'Accuracy+30','"Dbl.Atk."+4','DEX+7',}},
 		body = TP_Body,
 		hands = "Sakpata's Gauntlets",
 		ring1 = "Flamma ring",
 		ring2 = "Chirich Ring +1",
 		back= DA_Back,
 		waist = "Ioskeha belt +1",
-		--legs = "Pummeler's cuisses +3",
 		legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
 		feet = "Pummeler's calligae +3"
 	}
 
 	sets.TP.Chango ={
-		-- ammo ="Aurgelmir Orb +1",
 		head="Hjarrandi Helm",
 		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		--head={ name="Sakpata's Helm", augments={'Path: A',}},
 		body="Boii Lorica +3",
 		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
 		legs="Pumm. Cuisses +3",
@@ -201,7 +172,6 @@ function get_sets()
 		ring2 = "Flamma ring",
 		back = DA_Back,
 		waist = "Ioskeha belt +1",
-		--legs = "Pummeler's cuisses +3",
 		legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
 		feet = "Pummeler's calligae +3"
 	}
@@ -223,8 +193,6 @@ function get_sets()
 	}
 
 	sets.TP.DW = {
-				-- ammo ="Aurgelmir Orb +1",
-		-- head="Hjarrandi Helm",
 		ammo="Coiste Bodhar",
 		head="Flamma Zucchetto +2",
 		body="Sakpata's Plate",
@@ -257,10 +225,8 @@ function get_sets()
 	}
 	
 	sets.TP.Standard ={
-		-- ammo ="Aurgelmir Orb +1",
 		head="Flamma Zucchetto +2",
 		ammo="Ginsen",
-		--head={ name="Sakpata's Helm", augments={'Path: A',}},
 		body="Flamma korazin +2",
 		hands="Sakpata's Gauntlets",
 		legs="Flamma Dirs +2",
@@ -331,7 +297,6 @@ function get_sets()
 		ear1 = "Boii Earring +1",
 		body = "Hjarrandi Breast.",
 		hands = "Nyame Gauntlets",
-		--hands = "Flamma Manopolas +2",
 		ring1 = "Niqmaddu ring",
 		ring2 = "Hetairoi ring",
 		back = Crit_Back,
@@ -1411,57 +1376,6 @@ function midcast(spell, act)
 		else
 		end
 	else
-	end
-end
-function aftercast(spell)
-	if player.status == "Engaged" then
-		-- if player.equipment.main == "Bravura" and buffactive["Aftermath"] then
-			-- TP_ind = 7
-			-- equip(sets.TP[sets.TP.index[TP_ind]])
-			-- send_command("@input /echo Bravura DT Set")
-			-- if buffactive["doom"] or buffactive["curse"] then
-				-- equip(sets.Utility.Doomed)
-			-- end
-			-- if buffactive["terror"] or buffactive["stun"] or buffactive["sleep"] then
-				-- equip(sets.TP.DT)
-			-- end
-		-- elseif buffactive['Aftermath: Lv.3'] and player.equipment.main == "Ukonvasara" then
-		if buffactive['Aftermath: Lv.3'] and player.equipment.main == "Ukonvasara" then
-			--TP_ind = 12
-			equip(sets.TP.UkonAm)
-			send_command("@input /echo Ukon AM Set")
-			if buffactive["doom"] or buffactive["curse"] then
-				equip(sets.Utility.Doomed)
-			end
-			if buffactive["terror"] or buffactive["stun"] or buffactive["sleep"] then
-				equip(sets.TP.DT)
-			end
-		else
-			equip(set_combine(sets.Weapons[sets.Weapons.index[Weapons_ind]],sets.TP[sets.TP.index[TP_ind]]))
-			--send_command("@input /echo TP Set")
-			if buffactive["doom"] or buffactive["curse"] then
-				equip(sets.Utility.Doomed)
-			end
-			if buffactive["terror"] or buffactive["stun"] or buffactive["sleep"] then
-				equip(sets.TP.DT)
-			end
-		end
-
-	else
-		if Gear_Debug == 0 then
-			equip(set_combine(sets.Weapons[sets.Weapons.index[Weapons_ind]],equip(sets.Idle.Standard)))
-			if Sleeping_Mode == 1 then
-				equip({neck = "Opo-opo Necklace"})
-			else
-				equip(set_combine(sets.Weapons[sets.Weapons.index[Weapons_ind]],equip(sets.Idle.Standard)))
-				--send_command("@input /echo Idle Set")
-			end
-		else
-		end
-	end
-	if spell.interrupted == true then
-		equip(sets.TP[sets.TP.index[TP_ind]])
-		--send_command("@input /echo WS failed using Set")
 	end
 end
 
