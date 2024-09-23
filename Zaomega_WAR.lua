@@ -1,18 +1,4 @@
---TP set toggle input: //gs c toggle TP set----1 Standard, 2 Solo, 3 Marches, 4 AccuracyLite, 5 AccuracyMax, 6 DT, 7 DTAccuracy--
---Idle set toggle input: //gs c toggle Idle set----1 Standard, 2 DT--
-enmity_spells = S {"Provoke", "Animated Flourish"}
-
--- Select default macro book on initial load or subjob change.
-function select_default_macro_book()
-    -- Default macro set/book
-    set_macro_page(10, 3)
-end
-
-function sub_job_change(new,old)
-send_command('wait 2;input /lockstyleset 5')
-end
-
-send_command('wait 2;input /lockstyleset 5')
+--Idk, man
 
 function get_sets()
 	send_command("bind f9 gs c cycle TP set")
@@ -1648,6 +1634,17 @@ function buff_change(buff, gain)
 		end
 	end
 end
+
+-- Select default macro book on initial load or subjob change.
+function select_default_macro_book()
+    -- Default macro set/book
+    set_macro_page(10, 3)
+end
+
+function sub_job_change(new,old)
+send_command('wait 2;input /lockstyleset 5')
+end
+
 
 windower.register_event(
 	"zone change",
